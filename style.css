@@ -1,27 +1,33 @@
-body {
-    font-family: sans-serif;
+/* style.css */
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    background-image: linear-gradient(to right, rgba(144, 238, 144, 0.7), rgba(144, 238, 144, 0.7)), /* Verde semi-transparente */
-                      url('imagem-campo.jpg'), url('imagem-cidade.jpg');
-    background-position: left center, left center, right center;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 50% 100%, cover, cover; /* Metade para cada imagem */
+    font-family: sans-serif;
+    height: 100%;
+}
+
+.fundo {
+    background-image: url(Campo\ e\ Cidade\ em\ Harmonia.png); /* Substituir com o caminho real da imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 40px 0;
 }
 
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 header {
     text-align: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #cccccc00;
 }
 
 header h1 {
@@ -50,13 +56,13 @@ main section:last-child {
 .campo, .cidade {
     flex: 1;
     padding: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #f9f9f900;
+    border: 1px solid #dddddd00;
     border-radius: 5px;
 }
 
 .campo h2, .cidade h2 {
-    color: #558B2F; /* Tom de verde mais escuro */
+    color: #8cf541;
     margin-top: 0;
 }
 
@@ -70,7 +76,7 @@ main section:last-child {
 }
 
 .sustentabilidade li strong {
-    color: #388E3C; /* Outro tom de verde */
+    color: #62f169;
 }
 
 .celebracao {
@@ -80,7 +86,7 @@ main section:last-child {
 footer {
     text-align: center;
     padding-top: 20px;
-    color: #777;
+    color: #000000;
 }
 
 /* Adaptações para telas menores */
@@ -88,8 +94,25 @@ footer {
     .conexao {
         flex-direction: column;
     }
-    body {
-        background-size: cover, cover, cover;
-        background-position: top center, bottom left, bottom right;
-    }
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0); /* Leve transparência */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.campo, .cidade, .sustentabilidade, .celebracao {
+    background-color: rgba(0, 0, 0, 0.144); /* Cinza com transparência */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #f3e9e9; /* Branco para melhor contraste com fundo cinzento */
+}
+
+header h1, header p {
+    color: #fff; /* Para melhor leitura sobre fundo escuro/transparente */
 }
