@@ -10,37 +10,54 @@
     <div class="fundo">
         <div class="container">
             <header>
-                <h1>A Celebração da Nossa Interconexão</h1>
-                <p>Campo e cidade: um elo vital para um futuro sustentável.</p>
+                <h1><strong>A Celebração da Nossa Interconexão</strong></h1>
+                <p><strong>Campo e cidade: um elo vital para um futuro sustentável.</strong></p>
             </header>
             <main>
                 <section class="conexao">
                     <div class="campo">
-                        <h2>O Campo Nutre a Cidade</h2>
-                        <p>Com seus frutos da terra, o campo alimenta os centros urbanos, oferecendo sustento e vida. A agricultura consciente e as práticas sustentáveis garantem alimentos saudáveis para todos.</p>
+                        <h2 class="toggle-title">Por que o campo é tão importante para a cidade?</h2>
+                        <div class="toggle-content">
+                            <p><strong>O campo é essencial para a cidade, pois fornece alimentos para a população urbana. Além disso, a agricultura orgânica e as práticas sustentáveis são fundamentais para garantir a segurança alimentar. Sem a produção rural, a cidade não teria os recursos necessários para sustentar seu crescimento. Também é importante destacar que o campo contribui com recursos naturais, como a água, e com a matéria-prima que alimenta a indústria.</strong></p>
+                        </div>
                     </div>
                     <div class="cidade">
-                        <h2>A Cidade Impulsiona o Campo</h2>
-                        <p>A inovação e a tecnologia da cidade chegam ao campo, otimizando a produção, facilitando a gestão e abrindo novos mercados. A troca de conhecimento fortalece ambos os lados.</p>
+                        <h2 class="toggle-title">Por que a cidade é tão importante para o campo?</h2>
+                        <div class="toggle-content">
+                            <p><strong>A cidade traz inovação tecnológica para o campo, com a implementação de práticas agrícolas mais eficientes e sustentáveis. A urbanização cria mercados consumidores para os produtos agrícolas, além de facilitar o transporte e a logística. A infraestrutura urbana também apoia o desenvolvimento rural, criando oportunidades de escoamento da produção e integração entre os produtores rurais e os consumidores urbanos.</strong></p>
+                        </div>
                     </div>
                 </section>
                 <section class="sustentabilidade">
-                    <h2>Um Futuro Sustentável Juntos</h2>
-                    <p>A sustentabilidade é o alicerce desta conexão. Práticas agrícolas responsáveis, consumo consciente, energias renováveis e a preservação ambiental são responsabilidades compartilhadas para garantir um planeta próspero para as futuras gerações.</p>
-                    <ul>
-                        <li><strong>No Campo:</strong> Agricultura orgânica, manejo florestal, conservação do solo e da água.</li>
-                        <li><strong>Na Cidade:</strong> Consumo responsável, redução de resíduos, mobilidade sustentável, apoio a produtos locais.</li>
-                    </ul>
+                    <h2 class="toggle-title">A sustentabilidade como ponte entre campo e cidade</h2>
+                    <div class="toggle-content">
+                        <p><strong>Campo e cidade compartilham a responsabilidade de preservar o meio ambiente e garantir o uso responsável dos recursos naturais. Práticas agrícolas responsáveis e o consumo consciente nas cidades são essenciais para um futuro sustentável. A colaboração entre as áreas rural e urbana, com o uso de energias renováveis, tecnologias limpas e preservação da água, contribui para a redução da pegada ecológica e para a sustentabilidade do planeta.</strong></p>
+                    </div>
                 </section>
-                <section class="celebracao">
-                    <h2>Festeje essa União!</h2>
-                    <p>Vamos celebrar a força desta união, aprendendo uns com os outros e construindo juntos um futuro mais verde e equilibrado.</p>
+                
+                <!-- Seção para os Retângulos com Imagens -->
+                <section class="imagens">
+                    <div class="retangulo">
+                        <img src="imagem1.jpg" alt="Imagem 1" />
+                    </div>
+                    <div class="retangulo">
+                        <img src="imagem2.jpg" alt="Imagem 2" />
+                    </div>
                 </section>
             </main>
             <footer>
-                <p>&copy; 2025 Celebração Campo-Cidade Sustentável</p>
+                <p><strong>&copy; 2025 Celebração Campo-Cidade Sustentável</strong></p>
             </footer>
         </div>
     </div>
+
+    <!-- JavaScript embutido -->
+    <script>
+        document.querySelectorAll('.toggle-title').forEach(title => {
+            title.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
