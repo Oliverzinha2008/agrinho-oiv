@@ -69,11 +69,23 @@ main section:last-child {
     cursor: pointer;
 }
 
+/* Textos com dados e informações em branco e tamanho maior */
+.campo p, .campo strong,
+.cidade p, .cidade strong,
+.sustentabilidade p, .sustentabilidade strong,
+main p, main strong {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
 .sustentabilidade {
     background-color: rgba(52, 52, 52, 0.7); /* Cinza transparente */
     padding: 20px;
     border-radius: 5px;
-    color: #ffffff;  /* Texto em branco */
+}
+
+.sustentabilidade h2 {
+    color: #8cf541; /* Verde claro para o título */
 }
 
 /* Estilo para o footer */
@@ -146,16 +158,3 @@ footer p {
         width: 90%;
     }
 }
-
-/* Novo estilo para a sustentabilidade */
-.sustentabilidade h2 {
-    color: #8cf541; /* Verde claro para o título */
-}
-
-.sustentabilidade p {
-    color: #000000; /* Preto para o texto */
-}
-
-
-
-
