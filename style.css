@@ -1,19 +1,16 @@
-/* Estilos gerais */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    height: 100%;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
 }
 
-/* Mantém a imagem de fundo original */
 .fundo {
     background-image: url("Campo e Cidade em Harmonia.png");
-    background-size: cover;           /* Normal, preenche proporcionalmente */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;                /* Altura normal da tela */
+    min-height: 100vh;
     padding: 60px 0;
 }
 
@@ -21,67 +18,175 @@ body, html {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
 header {
     text-align: center;
-    padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 header h1 {
     color: #ffffff;
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
 header p {
-    color: #ffffff;
+    color: #e0e0e0;
+    font-size: 1.2em;
+}
+
+#searchBox {
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 main section {
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-}
-
-main section:last-child {
-    border-bottom: none;
+    margin: 30px 0;
 }
 
 .conexao {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-between;
 }
 
-.campo, .cidade {
-    flex: 1;
-    padding: 15px;
-    background-color: rgba(52, 52, 52, 0.7);
-    border-radius: 5px;
-}
-
-.campo h2, .cidade h2 {
-    color: #8cf541;
-    margin-top: 0;
-    cursor: pointer;
-}
-
-.campo p, .campo strong,
-.cidade p, .cidade strong,
-.sustentabilidade p, .sustentabilidade strong,
-main p, main strong {
-    color: #ffffff;
-    font-size: 1.1rem;
-}
-
-.sustentabilidade {
-    background-color: rgba(52, 52, 52, 0.7);
+.campo, .cidade, .sustentabilidade {
+    flex: 1 1 45%;
+    background-color: rgba(50, 50, 50, 0.6);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
+    color: #ffffff;
+    position: relative;
 }
 
-.sustentabilidade h2 {
-    color: #8cf541;
+.icone-bg {
+    position: absolute;
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.08);
+    top: 10px;
+    left: 10px;
+    z-index: 0;
+}
+
+.toggle-title {
+    cursor: pointer;
+    color: #b2ff59;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.toggle-title:hover {
+    color: #d0ff84;
+}
+
+.toggle-content {
+    display: none;
+    padding-top: 10px;
+    font-size: 1.1em;
+    position: relative;
+    z-index: 1;
+}
+
+.imagens {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.retangulo {
+    position: relative;
+    width: 220px;
+    height: 160px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.retangulo:hover {
+    transform: scale(1.05);
+}
+
+.retangulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.retangulo .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 0.9em;
+    display: none;
+}
+
+.retangulo .info.visible {
+    display: block;
+}
+
+.extensao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+.quadro {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    flex: 1 1 250px;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+    position: relative;
+}
+
+.quadro img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.quadro h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quadro:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 footer {
@@ -90,77 +195,25 @@ footer {
     color: #ffffff;
     background-color: rgba(34, 139, 34, 0.7);
     border-top: 2px solid #333;
+    margin-top: 50px;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* Transição de abertura de conteúdo */
-.toggle-content {
-    display: none;
-    transition: all 0.6s ease-in-out;
-    transform: rotateY(90deg);
-    opacity: 0;
-}
-
-.toggle-title:hover {
-    color: #62f169;
-}
-
-.toggle-title.active + .toggle-content {
-    display: block;
-    transform: rotateY(0deg);
-    opacity: 1;
-}
-
-/* Seção das imagens */
-.imagens {
-    background-color: white;
-    padding: 40px 0;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.retangulo {
-    background-color: #f0f0f0;
-    width: 45%;
-    margin: 10px 0;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-/* Aqui aumentamos apenas o campo.png */
-.retangulo img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 10px;
-}
-
-/* Aumenta só a altura da imagem do campo (Imagem 2) */
-.retangulo img[alt="Imagem 2"] {
-    width: 100%;
-    height: 430px; /* ajuste pequeno para aumentar só um pouco para baixo */
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.retangulo:hover {
-    transform: scale(1.05);
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
-    .conexao {
+    .conexao, .extensao {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .campo, .cidade, .quadro {
+        flex: 1 1 90%;
     }
 
     .retangulo {
         width: 90%;
+        height: 200px;
+    }
+
+    #searchBox {
+        width: 95%;
     }
 }

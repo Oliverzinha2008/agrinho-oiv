@@ -1,62 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festejando a Conexão Campo-Cidade</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conexão Campo-Cidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="fundo">
-        <div class="container">
-            <header>
-                <h1><strong>A Celebração da Nossa Interconexão</strong></h1>
-                <p><strong>Campo e cidade: um elo vital para um futuro sustentável.</strong></p>
-            </header>
-            <main>
-                <section class="conexao">
-                    <div class="campo">
-                        <h2 class="toggle-title">Por que o campo é tão importante para a cidade?</h2>
-                        <div class="toggle-content">
-                            <p><strong>O campo é essencial para a cidade, pois fornece alimentos para a população urbana. Além disso, a agricultura orgânica e as práticas sustentáveis são fundamentais para garantir a segurança alimentar. Sem a produção rural, a cidade não teria os recursos necessários para sustentar seu crescimento. Também é importante destacar que o campo contribui com recursos naturais, como a água, e com a matéria-prima que alimenta a indústria.</strong></p>
-                        </div>
-                    </div>
-                    <div class="cidade">
-                        <h2 class="toggle-title">Por que a cidade é tão importante para o campo?</h2>
-                        <div class="toggle-content">
-                            <p><strong>A cidade traz inovação tecnológica para o campo, com a implementação de práticas agrícolas mais eficientes e sustentáveis. A urbanização cria mercados consumidores para os produtos agrícolas, além de facilitar o transporte e a logística. A infraestrutura urbana também apoia o desenvolvimento rural, criando oportunidades de escoamento da produção e integração entre os produtores rurais e os consumidores urbanos.</strong></p>
-                        </div>
-                    </div>
-                </section>
-                <section class="sustentabilidade">
-                    <h2 class="toggle-title">A sustentabilidade como ponte entre campo e cidade</h2>
-                    <div class="toggle-content">
-                        <p><strong>Campo e cidade compartilham a responsabilidade de preservar o meio ambiente e garantir o uso responsável dos recursos naturais. Práticas agrícolas responsáveis e o consumo consciente nas cidades são essenciais para um futuro sustentável. A colaboração entre as áreas rural e urbana, com o uso de energias renováveis, tecnologias limpas e preservação da água, contribui para a redução da pegada ecológica e para a sustentabilidade do planeta.</strong></p>
-                    </div>
-                </section>
-                <!-- Seção para os Retângulos com Imagens -->
-                <section class="imagens">
-                    <div class="retangulo">
-                        <img src="cidade.png" alt="Imagem 1" />
-                    </div>
-                    <div class="retangulo">
-                        <img src="campo.png" alt="Imagem 2" />
-                    </div>
-                </section>
-            </main>
-            <footer>
-                <p><strong>&copy; 2025 Celebração Campo-Cidade Sustentável</strong></p>
-            </footer>
-        </div>
-    </div>
+  <div class="fundo">
+    <div class="container">
+      <header>
+        <h1><strong><i class="fas fa-seedling"></i> A Celebração da Conexão Campo-Cidade</strong></h1>
+        <p><strong>Um elo vital para um futuro sustentável, inovador e colaborativo.</strong></p>
+        <input type="text" id="searchBox" placeholder="Buscar por palavras-chave...">
+      </header>
 
-    <!-- JavaScript embutido -->
-    <script>
-        document.querySelectorAll('.toggle-title').forEach(title => {
-            title.addEventListener('click', function() {
-                this.classList.toggle('active');
-            });
+      <main>
+        <section class="conexao">
+          <div class="campo">
+            <div class="icone-bg">🌾</div>
+            <h2 class="toggle-title">🌾 Importância do Campo</h2>
+            <div class="toggle-content">
+              <p>O campo é essencial para a segurança alimentar e ambiental. Além de produzir alimentos, é fonte de água, biodiversidade e energia renovável.</p>
+              <p>A agricultura moderna investe em tecnologias limpas que garantem produtividade sem agredir a natureza.</p>
+            </div>
+          </div>
+
+          <div class="cidade">
+            <div class="icone-bg">🏙️</div>
+            <h2 class="toggle-title">🏙️ Importância da Cidade</h2>
+            <div class="toggle-content">
+              <p>As cidades concentram inovação, educação e consumo. São fundamentais para impulsionar o campo com pesquisa e demanda por produtos de qualidade.</p>
+              <p>O planejamento urbano sustentável também contribui com o campo, reduzindo impactos ambientais.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="sustentabilidade">
+          <div class="icone-bg">🌱</div>
+          <h2 class="toggle-title">🌱 Sustentabilidade como Ponte</h2>
+          <div class="toggle-content">
+            <p>A sustentabilidade une o campo e a cidade pela busca de equilíbrio ambiental. A cidade pode reduzir consumo e promover reciclagem.</p>
+            <p>O campo pode adotar práticas como agroecologia e reflorestamento para manter o ciclo natural saudável.</p>
+          </div>
+        </section>
+
+        <section class="imagens">
+          <div class="retangulo" onclick="toggleImageInfo(this)">
+            <img src="cidade.png" alt="Cidade">
+            <div class="info">As cidades concentram 85% da população brasileira e influenciam diretamente o campo.</div>
+          </div>
+          <div class="retangulo" onclick="toggleImageInfo(this)">
+            <img src="campo.png" alt="Campo">
+            <div class="info">O campo representa mais de 20% do PIB do Brasil com sua produção agropecuária.</div>
+          </div>
+        </section>
+
+        <section class="extensao">
+          <div class="quadro">
+            <img src="agua.png" alt="Conservação da Água">
+            <h3><i class="fas fa-water"></i> Conservação da Água</h3>
+            <p>Mais de 70% da água doce utilizada no Brasil vem da agricultura. Preservar mananciais é essencial para o futuro do campo e da cidade.</p>
+          </div>
+          <div class="quadro">
+            <img src="agro floresta.png" alt="Florestas e Sustento">
+            <h3><i class="fas fa-tree"></i> Florestas e Sustento</h3>
+            <p>O reflorestamento e a agrofloresta ajudam a manter o solo fértil, combater o desmatamento e gerar renda para famílias rurais.</p>
+          </div>
+          <div class="quadro">
+            <img src="energia.png" alt="Energia no Campo">
+            <h3><i class="fas fa-solar-panel"></i> Energia no Campo</h3>
+            <p>Placas solares e biogás têm ajudado pequenos produtores a reduzir custos e emissões, fortalecendo a produção verde.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p><strong>&copy; 2025 Projeto Conexão Campo-Cidade Sustentável</strong></p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.toggle-title').forEach(title => {
+      title.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    function toggleImageInfo(el) {
+      const info = el.querySelector('.info');
+      info.classList.toggle('visible');
+    }
+
+    const searchBox = document.getElementById("searchBox");
+    searchBox.addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      document.querySelectorAll(".campo, .cidade, .sustentabilidade").forEach(section => {
+        const title = section.querySelector(".toggle-title").textContent.toLowerCase();
+        section.style.display = title.includes(query) ? "block" : "none";
+      });
+    });
+
+    document.body.addEventListener("click", function (e) {
+      if (e.target.id !== "searchBox") {
+        document.querySelectorAll(".campo, .cidade, .sustentabilidade").forEach(section => {
+          section.style.display = "block";
         });
-    </script>
+      }
+    });
+  </script>
 </body>
 </html>
