@@ -19,7 +19,7 @@
 
       <main>
         <section class="conexao">
-          <div class="campo">
+          <div class="campo bloco-info">
             <div class="icone-bg">🌾</div>
             <h2 class="toggle-title">🌾 Importância do Campo</h2>
             <div class="toggle-content">
@@ -28,7 +28,7 @@
             </div>
           </div>
 
-          <div class="cidade">
+          <div class="cidade bloco-info">
             <div class="icone-bg">🏙️</div>
             <h2 class="toggle-title">🏙️ Importância da Cidade</h2>
             <div class="toggle-content">
@@ -38,7 +38,7 @@
           </div>
         </section>
 
-        <section class="sustentabilidade">
+        <section class="sustentabilidade bloco-info">
           <div class="icone-bg">🌱</div>
           <h2 class="toggle-title">🌱 Sustentabilidade como Ponte</h2>
           <div class="toggle-content">
@@ -48,11 +48,11 @@
         </section>
 
         <section class="imagens">
-          <div class="retangulo" onclick="toggleImageInfo(this)">
+          <div class="retangulo">
             <img src="cidade.png" alt="Cidade">
             <div class="info">As cidades concentram 85% da população brasileira e influenciam diretamente o campo.</div>
           </div>
-          <div class="retangulo" onclick="toggleImageInfo(this)">
+          <div class="retangulo">
             <img src="campo.png" alt="Campo">
             <div class="info">O campo representa mais de 20% do PIB do Brasil com sua produção agropecuária.</div>
           </div>
@@ -84,19 +84,6 @@
   </div>
 
   <script>
-    document.querySelectorAll('.toggle-title').forEach(title => {
-      title.addEventListener('click', function () {
-        this.classList.toggle('active');
-        const content = this.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-
-    function toggleImageInfo(el) {
-      const info = el.querySelector('.info');
-      info.classList.toggle('visible');
-    }
-
     const searchBox = document.getElementById("searchBox");
     searchBox.addEventListener("input", function () {
       const query = this.value.toLowerCase();
